@@ -2,6 +2,9 @@ module.exports = {
     content: ['./public/index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            animation: {
+                grow: 'grow 1s ease-out',
+            },
             backgroundImage: {
                 'desktop-header': "url('../images/desktop/image-header.jpg')",
                 'mobile-header': "url('../images/mobile/image-header.jpg')",
@@ -22,6 +25,12 @@ module.exports = {
             },
             fontFamily: {
                 sans: ['DM Sans', 'sans-serif'],
+            },
+            keyframes: {
+                grow: {
+                    '0%': { transform: 'scale(1,0)' },
+                    '100%': { transform: 'scale(1)' },
+                },
             },
         },
     },

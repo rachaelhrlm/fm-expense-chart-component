@@ -55,7 +55,7 @@ export const App: FunctionComponent = () => {
                                     <div
                                         className={classNames(
                                             { 'bg-primary-cyan': today === index },
-                                            'w-full bg-primary-red rounded-sm relative cursor-pointer group transition-all duration-300 ease-in-out hover:bg-opacity-50 md:rounded-md',
+                                            'w-full bg-primary-red rounded-sm relative cursor-pointer group transition-all duration-300 ease-in-out origin-bottom animate-grow hover:bg-opacity-50 md:rounded-md',
                                         )}
                                         style={{ height: `${(amount / maxAmount) * 100}%` }}>
                                         <div className="absolute -top-7 -m-[20%] w-[140%] p-1 bg-neutral-dark-brown rounded-sm text-white text-center opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 md:rounded-md">
