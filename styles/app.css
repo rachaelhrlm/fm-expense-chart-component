@@ -354,8 +354,35 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.absolute{
+  position: absolute;
+}
+.relative{
+  position: relative;
+}
 .bottom-0{
   bottom: 0px;
+}
+.-top-5{
+  top: -1.25rem;
+}
+.-top-10{
+  top: -2.5rem;
+}
+.-top-\[20\%\]{
+  top: -20%;
+}
+.-top-8{
+  top: -2rem;
+}
+.-top-7{
+  top: -1.75rem;
+}
+.-m-\[10\%\]{
+  margin: -10%;
+}
+.-m-\[20\%\]{
+  margin: -20%;
 }
 .mt-2{
   margin-top: 0.5rem;
@@ -368,6 +395,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid{
   display: grid;
+}
+.hidden{
+  display: none;
 }
 .h-screen{
   height: 100vh;
@@ -395,6 +425,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-12{
   width: 3rem;
+}
+.w-\[120\%\]{
+  width: 120%;
+}
+.w-\[140\%\]{
+  width: 140%;
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -498,6 +537,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: hsl(186 34% 60% / var(--tw-bg-opacity));
 }
+.bg-neutral-dark-brown{
+  --tw-bg-opacity: 1;
+  background-color: hsl(25 47% 15% / var(--tw-bg-opacity));
+}
 .p-3{
   padding: 0.75rem;
 }
@@ -547,6 +590,35 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-neutral-brown{
   --tw-text-opacity: 1;
   color: hsl(28 10% 53% / var(--tw-text-opacity));
+}
+.opacity-0{
+  opacity: 0;
+}
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300{
+  transition-duration: 300ms;
+}
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hover\:bg-opacity-50:hover{
+  --tw-bg-opacity: 0.5;
+}
+.hover\:opacity-40:hover{
+  opacity: 0.4;
+}
+.hover\:opacity-50:hover{
+  opacity: 0.5;
+}
+.group:hover .group-hover\:block{
+  display: block;
+}
+.group:hover .group-hover\:opacity-100{
+  opacity: 1;
 }
 @media (min-width: 768px){
   .md\:h-\[125px\]{
@@ -603,5 +675,46 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+}
+@media (min-width: 1024px){
+  .lg\:h-\[125px\]{
+    height: 125px;
+  }
+  .lg\:w-\[540px\]{
+    width: 540px;
+  }
+  .lg\:gap-5{
+    gap: 1.25rem;
+  }
+  .lg\:space-y-6 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+  }
+  .lg\:rounded-lg{
+    border-radius: 0.5rem;
+  }
+  .lg\:p-6{
+    padding: 1.5rem;
+  }
+  .lg\:p-2{
+    padding: 0.5rem;
+  }
+  .lg\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .lg\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
   }
 }
