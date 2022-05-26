@@ -1,6 +1,40 @@
-import React, { FunctionComponent } from 'react';
+import classNames from 'classnames';
+import React, { FunctionComponent, useEffect, useState } from 'react';
+
+interface DailyExpense {
+    day: string;
+    amount: number;
+}
 
 export const App: FunctionComponent = () => {
+    const [dailyExpenses, setDailyExpenses] = useState<DailyExpense[]>([]);
+    const amounts = dailyExpenses.map((item) => item.amount);
+    const days = dailyExpenses.map((item) => item.day);
+    const maxAmount = Math.max(...amounts);
+    const today = new Date().getDay() > 0 ? new Date().getDay() - 1 : 6;
+
+    useEffect(() => {
+        const getData = async () => {
+            const data: DailyExpense[] = await fetch(
+                `${window.location.host.includes('localhost') ? '' : '/fm-expense-chart-component'}/json/data.json`,
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Accept: 'application/json',
+                    },
+                },
+            ).then((response) => response.json());
+
+            if (data) setDailyExpenses(data);
+        };
+
+        getData();
+
+        return () => {
+            setDailyExpenses([]);
+        };
+    }, []);
+
     return (
         <main className="w-full h-screen bg-neutral-cream p-3 flex flex-col gap-4 place-items-center place-content-center">
             <div className="w-full h-[97px] bg-primary-red rounded-xl p-5 text-white flex justify-between md:w-[540px] md:h-[125px] md:p-6">
@@ -15,22 +49,20 @@ export const App: FunctionComponent = () => {
                 <h1 className="text-2xl font-bold md:text-3xl">Spending - Last 7 days</h1>
                 <div className="space-y-2 pt-5">
                     <div className="grid grid-cols-7 gap-2 h-[150px] place-items-end md:gap-5">
-                        <div className="w-full bg-primary-red rounded-sm md:rounded-md" style={{ height: '33%' }}></div>
-                        <div className="w-full bg-primary-red rounded-sm md:rounded-md" style={{ height: '50%' }}></div>
-                        <div className="w-full bg-primary-cyan rounded-sm md:rounded-md" style={{ height: '100%' }}></div>
-                        <div className="w-full bg-primary-red rounded-sm md:rounded-md" style={{ height: '65%' }}></div>
-                        <div className="w-full bg-primary-red rounded-sm md:rounded-md" style={{ height: '74%' }}></div>
-                        <div className="w-full bg-primary-red rounded-sm md:rounded-md" style={{ height: '33%' }}></div>
-                        <div className="w-full bg-primary-red rounded-sm md:rounded-md" style={{ height: '65%' }}></div>
+                        {amounts.length &&
+                            amounts.map((amount, index) => {
+                                return (
+                                    <div
+                                        className={classNames(
+                                            { 'bg-primary-cyan': today === index },
+                                            'w-full bg-primary-red rounded-sm md:rounded-md',
+                                        )}
+                                        style={{ height: `${(amount / maxAmount) * 100}%` }}></div>
+                                );
+                            })}
                     </div>
                     <div className="grid grid-cols-7 gap-2 text-center text-neutral-brown text-xs md:gap-5 md:text-sm">
-                        <p>mon</p>
-                        <p>tue</p>
-                        <p>wed</p>
-                        <p>thu</p>
-                        <p>fri</p>
-                        <p>sat</p>
-                        <p>sun</p>
+                        {days.length && days.map((day) => <p>{day}</p>)}
                     </div>
                 </div>
                 <hr className="border-neutral-cream border" />
