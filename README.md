@@ -26,7 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
-![rachaelhrlm github io_fm-expense-chart-component_](https://user-images.githubusercontent.com/60798176/170556744-5af367fc-8084-4fb0-82e3-bfbad87d3677.png)
+![rachaelhrlm github io_fm-expense-chart-component_ (1)](https://user-images.githubusercontent.com/60798176/170562549-c303f617-85fe-4abd-8e2c-1a6dfb45ca02.png)
+
 
 ### Links
 
