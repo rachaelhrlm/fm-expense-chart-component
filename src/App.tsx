@@ -81,6 +81,12 @@ export const App: FunctionComponent = () => {
                     </section>
                 </div>
             </div>
+            <div className="absolute bottom-3">
+                {`by `}
+                <a className="text-primary-red" href="https://github.com/rachaelhrlm" target="_blank" rel="noreferrer">
+                    Rachael Malinowska
+                </a>
+            </div>
         </main>
     );
 };
