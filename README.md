@@ -1,6 +1,6 @@
 # Frontend Mentor - Expenses chart component solution
 
-This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the [Expenses chart component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt).
 
 ## Table of contents
 
@@ -11,8 +11,6 @@ This is a solution to the [Expenses chart component challenge on Frontend Mentor
 -   [My process](#my-process)
     -   [Built with](#built-with)
     -   [What I learned](#what-i-learned)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,6 +26,8 @@ Users should be able to:
 
 ### Screenshot
 
+![rachaelhrlm github io_fm-expense-chart-component_](https://user-images.githubusercontent.com/60798176/170556744-5af367fc-8084-4fb0-82e3-bfbad87d3677.png)
+
 ### Links
 
 -   [Live Site URL](https://rachaelhrlm.github.io/fm-expense-chart-component/)
@@ -40,12 +40,7 @@ Users should be able to:
 -   TypeScript
 -   Tailwind-CSS
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
 ### What I learned
 
 I wanted to try a bit of css animations by adding an animation for the bar graph to grow when it loads up -- it was a lot simpler to do than I thought it would be!
 
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
