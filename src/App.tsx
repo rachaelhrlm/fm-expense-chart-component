@@ -39,7 +39,7 @@ export const App: FunctionComponent = () => {
         <main className="w-full h-screen bg-neutral-cream p-3 flex flex-col gap-4 place-items-center place-content-center">
             <div className="w-full h-[97px] bg-primary-red rounded-xl p-5 text-white flex justify-between md:w-[540px] md:h-[125px] md:p-6">
                 <section className="h-full grid">
-                    <h1 className="text-sm md:text-base">My balance</h1>
+                    <h2 className="text-sm md:text-base">My balance</h2>
                     <p className="text-2xl font-bold md:text-3xl">$921.48</p>
                 </section>
                 <img className="p-1 md:p-2" src={`${process.env.PUBLIC_URL}/images/logo.svg`} alt="logo" />
@@ -55,9 +55,13 @@ export const App: FunctionComponent = () => {
                                     <div
                                         className={classNames(
                                             { 'bg-primary-cyan': today === index },
-                                            'w-full bg-primary-red rounded-sm md:rounded-md',
+                                            'w-full bg-primary-red rounded-sm relative cursor-pointer group transition-all duration-300 ease-in-out hover:bg-opacity-50 md:rounded-md',
                                         )}
-                                        style={{ height: `${(amount / maxAmount) * 100}%` }}></div>
+                                        style={{ height: `${(amount / maxAmount) * 100}%` }}>
+                                        <div className="absolute -top-7 -m-[20%] w-[140%] p-1 bg-neutral-dark-brown rounded-sm text-white text-center opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 md:rounded-md">
+                                            {`$${amount}`}
+                                        </div>
+                                    </div>
                                 );
                             })}
                     </div>
@@ -68,12 +72,12 @@ export const App: FunctionComponent = () => {
                 <hr className="border-neutral-cream border" />
                 <div className="flex justify-between">
                     <section className="space-y-1">
-                        <h1 className="text-neutral-brown text-sm md:text-base">Total this month</h1>
+                        <h2 className="text-neutral-brown text-sm md:text-base">Total this month</h2>
                         <p className="text-2xl font-bold md:text-5xl">$478.33</p>
                     </section>
                     <section className="text-sm text-right flex flex-col justify-end md:text-base">
                         <p className="font-bold">+2.4%</p>
-                        <h1 className="text-neutral-brown">from last month</h1>
+                        <h2 className="text-neutral-brown">from last month</h2>
                     </section>
                 </div>
             </div>
