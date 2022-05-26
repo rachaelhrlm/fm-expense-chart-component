@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/fm-expense-chart-component/static/js/main.cefaa719.js",
+    "main.js": "/fm-expense-chart-component/static/js/main.98865180.js",
     "static/js/787.0d2046bd.chunk.js": "/fm-expense-chart-component/static/js/787.0d2046bd.chunk.js",
     "index.html": "/fm-expense-chart-component/index.html",
-    "main.cefaa719.js.map": "/fm-expense-chart-component/static/js/main.cefaa719.js.map",
+    "main.98865180.js.map": "/fm-expense-chart-component/static/js/main.98865180.js.map",
     "787.0d2046bd.chunk.js.map": "/fm-expense-chart-component/static/js/787.0d2046bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.cefaa719.js"
+    "static/js/main.98865180.js"
   ]
 }
